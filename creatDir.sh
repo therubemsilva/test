@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for arqDw in ../comp/pdb/pdb_align/dow_pdb_align/rcol_dow_gro_align/name_rcol_dow_gro_aling/*.gro; do
+	name=`echo $arqDw | cut -d'/' -f8 | cut -d'_' -f2,3,5`
+	mkdir ${name}
+	cd $name
+	mkdir coord md mdp top
+	cd ../
+done
